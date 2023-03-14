@@ -17,14 +17,12 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  let excuseWho = `${excusas(who)} ${excusas(action)} ${excusas(
+  let excuseList = `${excusas(who)} ${excusas(action)} ${excusas(
     what
   )} ${excusas(when)}`;
-  console.log(excuseWho);
-  console.log("Hello Rigo from the console!");
-};
+  console.log(excuseList);
 
-function excusas(array) {
-  return Math.floor(Math.random() * array.length);
-}
-console.log(excusas());
+  function excusas(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+};
